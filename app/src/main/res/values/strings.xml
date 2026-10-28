@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">LearningAndroid</string>
+    <string name="header">Калькулятор чаевых!</string>
+    <string name="editHint">Введите сумму чека</string>
+    <string name="buttonText">Расчитать чаевые!</string>
 </resources>
