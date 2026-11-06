@@ -1,5 +1,6 @@
 package com.academy.learningandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -22,36 +23,32 @@ import androidx.core.view.WindowInsetsCompat;
 import kotlin.text.HexExtensionsKt;
 
 public class MainActivity extends AppCompatActivity {
-    WebView webview;
-    WebSettings webSettings;
-    long backPressedTime = 0L;
-    private static final int EXIT_DELAY = 2000;
+    Button start;
+    Button stop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        webview = findViewById(R.id.webView);
-        webSettings = webview.getSettings();
-        webview.loadUrl("https://www.google.com");
-        webSettings.setJavaScriptEnabled(true);
-        webview.setWebViewClient(new WebViewClient());
+        start = findViewById(R.id.btnStart);
+        stop = findViewById(R.id.btnStop);
 
-        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+        start.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void handleOnBackPressed() {
-                if(webview.canGoBack()) {
-                    webview.goBack();
-                    return;
-                }
-                long now = SystemClock.elapsedRealtime();
-                if(now - backPressedTime < EXIT_DELAY){
-                    finish();
-                }else{
-                    backPressedTime = now;
-                    Toast.makeText(MainActivity.this, "Нажми еще раз, что бы выйти", Toast.LENGTH_SHORT).show();
-                }
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MediaService.class);
+                startService(intent);
+                Toast.makeText(MainActivity.this, "START", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MediaService.class);
+                stopService(intent);
+                Toast.makeText(MainActivity.this, "STOP", Toast.LENGTH_SHORT).show();
             }
         });
     }

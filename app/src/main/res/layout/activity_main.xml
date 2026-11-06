@@ -10,9 +10,17 @@
     android:gravity="center_horizontal"
     >
 
-    <WebView
-        android:id="@+id/webView"
+    <Button
+        android:id="@+id/btnStart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:text="START"
+        />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="STOP" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
