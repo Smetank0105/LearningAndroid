@@ -13,8 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningAndroid">
 
-        <service android:name=".MediaService"
-            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

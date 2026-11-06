@@ -10,17 +10,20 @@
     android:gravity="center_horizontal"
     >
 
-    <Button
-        android:id="@+id/btnStart"
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="START"
-        />
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btnStop"
+        android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="STOP" />
+        android:text="Перейти" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
