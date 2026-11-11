@@ -11,47 +11,31 @@
     >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/header"
-        android:paddingVertical="30dp"
-        android:textSize="25sp"/>
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/editHint"
-        android:inputType="numberDecimal"
-        android:digits="0123456789."/>
-
-
-    <SeekBar
-        android:id="@+id/seekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="10"
-        android:progress="0"
-        android:paddingTop="30dp"
-        />
+        android:text="Погода в городе"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
 
-    <TextView
-        android:id="@+id/textViewPercent"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editCity"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0%"
-        android:paddingBottom="30dp"/>
-
+        android:hint="Введите город"
+        android:inputType="textCapWords"/>
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonWeather"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/buttonText"/>
+        android:text="Узнать погоду"/>
 
     <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="wrap_content"
+        android:id="@+id/textWeather"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:text="Здесь появится информация о погоде"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

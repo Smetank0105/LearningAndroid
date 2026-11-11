@@ -33,6 +33,11 @@ android {
 }
 
 dependencies {
+    // Retrofit — библиотека для HTTP-запросов
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    // Конвертер JSON в объекты Gson
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
     implementation(libs.activity.ktx)
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
