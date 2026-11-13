@@ -13,29 +13,40 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Погода в городе"
+        android:text="Чат бот"
         android:textSize="24sp"
         android:gravity="center"
         android:layout_marginBottom="20dp"/>
 
     <EditText
-        android:id="@+id/editCity"
+        android:id="@+id/editSysPrompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите город"
+        android:hint="Введите параметры запроса"
+        android:inputType="textCapWords"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите запрос"
         android:inputType="textCapWords"/>
     <Button
-        android:id="@+id/buttonWeather"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Узнать погоду"/>
+        android:text="Отправить"/>
 
-    <TextView
-        android:id="@+id/textWeather"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Здесь появится информация о погоде"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+    </ScrollView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

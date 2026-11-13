@@ -37,6 +37,8 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     // Конвертер JSON в объекты Gson
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    // Логирование HTTP-запросов
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
     implementation(libs.activity.ktx)
     implementation(libs.appcompat)
